@@ -1,0 +1,20 @@
+<div class="transaction-container">
+
+    <h2>Fund Transfer</h2>
+
+    <p>Available Balance : ₹ {{ balance }}</p>
+
+    <input
+        type="number"
+        [(ngModel)]="amount"
+        placeholder="Enter Amount">
+
+    <br><br>
+
+    <button (click)="transfer()">
+        Transfer
+    </button>
+
+    <h3>{{ message }}</h3>
+
+</div>
