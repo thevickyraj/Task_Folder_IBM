@@ -1,0 +1,43 @@
+{
+  "accounts": [
+    {
+      "id": "1",
+      "accountNumber": "1234567890",
+      "balance": 8500
+    },
+    {
+      "id": "2",
+      "accountNumber": "9876543210",
+      "balance": 3500
+    },
+    {
+      "accountNumber": "3",
+      "balance": 20000,
+      "id": "gxxY3VSdPNc"
+    }
+  ],
+  "transfers": [
+    {
+      "fromAccount": "1",
+      "toAccount": "2",
+      "amount": 2222,
+      "transferDate": "2026-08-06T06:18:07.815Z",
+      "id": "xTM-I9HMdDY"
+    },
+    {
+      "fromAccount": "1",
+      "toAccount": "2",
+      "amount": 2000,
+      "transferDate": "2026-08-06T06:18:22.079Z",
+      "id": "VwOOk988hXg"
+    },
+    {
+      "fromAccount": "1234567890",
+      "toAccount": "9876543210",
+      "amount": 800,
+      "transferDate": "2026-08-06T07:04:40.675Z",
+      "id": "AfPtCg1JzaM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
