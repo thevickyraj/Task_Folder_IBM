@@ -1,11 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { FundTransferService, Account } from "../services/fundTransfer.service";
+import { SharedModule } from "../pipes/shared/shared.module";
 
 @Component({
   selector: "app-dashboard",
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,
+    SharedModule
+  ],
 
   template: `
     <h1>Dashboard</h1>
