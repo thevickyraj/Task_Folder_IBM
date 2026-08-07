@@ -1,0 +1,77 @@
+.history {
+  background: #ffffff;
+  margin-top: 25px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.history h2 {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 10px;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.history thead {
+  background: #2563eb;
+  color: white;
+}
+
+.history th {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.history td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.history tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.history tbody tr:hover {
+  background: #e0f2fe;
+  transition: 0.3s;
+}
+
+.deposit {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.withdraw {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.opening {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.deposit {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.withdraw {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.opening {
+  color: #2563eb;
+  font-weight: bold;
+}
