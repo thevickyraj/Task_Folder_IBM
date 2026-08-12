@@ -1,6 +1,4 @@
 package com.bank.service;
-
-
 import com.model.Customer;
 
 public class BankService {

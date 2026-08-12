@@ -1,0 +1,10 @@
+{
+    "accountNumber": "1234567890",
+    "accountHolder": "Vicky",
+    "accountType": "Savings",
+    "branch": "Bangalore Main Branch",
+    "ifsc": "SBIN0001234",
+    "mobile": "+91 9110615868",
+    "email": "vickyraj@gmail.com",
+    "status": "Active"
+}
