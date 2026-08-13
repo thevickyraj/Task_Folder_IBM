@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Title displayed in the browser tab -->
+    <title>Note Keeper</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Main heading -->
+    <h1>Note Keeper</h1>
+
+
+    <!--
+        Create a flex container.
+
+        Inside this container we will display
+        all the notes.
+    -->
+    <div class="notes">
+
+        <!--
+            EJS code.
+
+            "data" comes from app.js:
+
+            res.render("home", {
+                data: notes
+            });
+
+            forEach() loops through every note.
+        -->
+        <% data.forEach(element => { %>
+
+            <div class="note">
+
+
+            <!--
+                Form used to UPDATE a note.
+
+                When the user clicks Update,
+                the browser sends a POST request to:
+
+                /update
+            -->
+            <form action="/update" method="post">
+
+                <!--
+                    Hidden input.
+
+                    The user cannot see this input.
+
+                    It stores the ID of the note
+                    that is being updated.
+                -->
+                <input
+                    type="number"
+                    style="display: none;"
+                    name="noteId"
+                    value="<%= element.noteId %>"
+                >
+
+                <!--
+                    Textarea displays the current note content.
+
+                    <%= element.noteContent %>
+
+                    is EJS syntax that inserts the
+                    note content into the HTML.
+                -->
+                <textarea
+                    rows="6"
+                    cols="30"
+                    placeholder="Type Here..."
+                    name="noteContent"
+                ><%= element.noteContent %></textarea>
+
+                <br>
+
+                <!-- Submit the update form -->
+                <button type="submit">Update</button>
+
+            </form>
+
+
+            <!--
+                Separate form for deleting a note.
+
+                When the X button is clicked,
+                a POST request is sent to:
+
+                /delete
+            -->
+            <form action="/delete" method="post">
+
+                <!--
+                    Hidden input containing the note ID.
+                -->
+                <input
+                    type="number"
+                    style="display: none;"
+                    name="noteId"
+                    value="<%= element.noteId %>"
+                >
+
+                <!-- Delete button -->
+                <button type="submit" class="delete">&#10005;</button>
+
+            </form>
+
+
+            </div>
+
+        <!--
+            End of the forEach loop.
+
+            Everything between:
+
+                &lt;% data.forEach(...) %&gt;
+
+            and:
+
+                &lt;% }) %&gt;
+
+            is repeated for every note.
+        -->
+        <% }) %>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- ADD NEW NOTE -->
+    <!-- ================================================= -->
+
+    <h1>Add Note</h1>
+
+    <!--
+        Form used to create a new note.
+
+        The form sends a POST request to "/".
+    -->
+    <form action="/" method="post">
+
+        <!--
+            Hidden note ID.
+
+            This isn't actually needed when adding a note
+            because app.js generates the ID automatically.
+        -->
+        <input
+            type="number"
+            style="display: none;"
+            name="noteId"
+        >
+
+        <!--
+            Textarea where the user enters a new note.
+        -->
+        <textarea
+            rows="6"
+            cols="30"
+            placeholder="Type Here..."
+            name="noteContent"
+        ></textarea>
+
+        <br>
+
+        <!-- Submit button -->
+        <button type="submit">Add</button>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+/* Styles for Task - 4 Note Keeper */
+body { font-family: Arial, Helvetica, sans-serif; background:#f7f8fa; margin:20px; color:#222; }
+h1 { margin-bottom:12px; }
+.notes { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px; }
+.note { background:#fff; border:1px solid #e3e6ea; padding:12px; border-radius:8px; width:260px; box-shadow:0 1px 4px rgba(16,24,40,0.04); box-sizing:border-box; }
+.note textarea { width:100%; box-sizing:border-box; font-size:14px; padding:6px; border:1px solid #dfe3e8; border-radius:6px; resize:vertical; }
+.note form { margin:6px 0 0 0; }
+button { background:#0b69ff; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+button.delete { background:#e03131; padding:6px 10px; }
+form.add-note textarea { width:380px; max-width:100%; }
+@media (max-width:600px) { .notes { justify-content:center; } .note { width:100%; } form.add-note textarea { width:100%; } }

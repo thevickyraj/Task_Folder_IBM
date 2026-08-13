@@ -1,0 +1,70 @@
+/* Modern styles for Note Keeper */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: linear-gradient(90deg,#7c3AED,#06b6d4);
+  --primary:#0ea5e9;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  margin:0;
+  background: radial-gradient(1000px 400px at 10% 10%, rgba(124,58,237,0.12), transparent),
+              linear-gradient(180deg,#f7fbff 0%, #f1f5f9 100%);
+  color:#0b1220;
+  -webkit-font-smoothing:antialiased;
+}
+.site{
+  max-width:1100px;
+  margin:36px auto;
+  padding:28px;
+}
+.header{
+  display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:52px;height:52px;border-radius:12px;background:var(--accent);box-shadow:0 6px 18px rgba(12,74,110,0.08);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px
+}
+h1{margin:0;font-size:22px}
+.subtitle{color:var(--muted);font-size:13px}
+
+.main{
+  display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;
+}
+
+.notes{
+  display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;
+}
+.note{
+  background:#fff;border-radius:12px;padding:14px;width:260px;box-shadow:0 6px 18px rgba(12,24,40,0.06);
+  border:1px solid rgba(11,17,32,0.04);
+}
+.note textarea{width:100%;min-height:110px;border:1px solid #eef2f6;padding:8px;border-radius:8px;font-size:14px}
+.note .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.note .meta small{color:var(--muted)}
+
+.controls{display:flex;gap:8px}
+.btn{padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,#06b6d4,#7c3aed);color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(11,17,32,0.06);color:#0b1220}
+.btn.danger{background:#ef4444;color:#fff}
+
+.aside{background:#ffffff;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(12,24,40,0.04);}
+.aside h3{margin:0 0 8px 0}
+.form-row{margin-top:10px}
+.form-row textarea{width:100%;min-height:120px;padding:10px;border-radius:8px;border:1px solid #eef2f6}
+
+footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+@media (max-width:900px){.main{grid-template-columns:1fr}.aside{order:2}.notes{justify-content:center}}
+
+@media (prefers-color-scheme:dark){
+  body{background:#071024;color:#e6eef8}
+  .note{background:#071428;border-color:rgba(255,255,255,0.04)}
+  .aside{background:#061325}
+}
