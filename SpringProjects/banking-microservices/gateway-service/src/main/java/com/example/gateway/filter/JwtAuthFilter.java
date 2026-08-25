@@ -65,13 +65,10 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
 
         String username = claims.getSubject();
 
-        String role = claims.get("role", String.class);
+        String jwtRole = claims.get("role", String.class);
 
-        // Your current auth-service token does not contain role,
-        // so use USER as the default.
-        if (role == null) {
-            role = "USER";
-        }
+        // Create a new final/effectively-final variable
+        final String role = jwtRole != null ? jwtRole : "USER";
 
         // Add user information to downstream request
         ServerWebExchange modifiedExchange =
