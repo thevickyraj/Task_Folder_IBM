@@ -1,0 +1,1 @@
+package com.security.demo.model; import jakarta.persistence.*; import jakarta.validation.constraints.*; @Entity public class User{ @Id @GeneratedValue private Long id; @NotBlank private String username; @NotBlank private String password; private String role; }
